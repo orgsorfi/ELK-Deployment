@@ -55,7 +55,7 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 67.169.250.57        |
-| Elk VM   | Yes                 | 67.169.250.57 & 10.0.0.4|
+| Elk VM   | Yes                 | 67.169.250.57        |
 |          |                     |                      |
 
 ### Elk Configuration
@@ -71,8 +71,8 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `Elk_stack_readout` after successfully configuring the ELK instance.
 
-/Pictures/Elk_stack_readout
-
+   - /Pictures/Elk_stack_readout -
+[Azure_VM_Diagrams](Pictures/Elk_stack_readout.png)
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - Web-1 @10.0.0.7 Web-2 @ 10.0.0.8 Web-3 @ 10.0.0.5

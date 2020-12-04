@@ -72,7 +72,7 @@ The playbook implements the following tasks:
 The following screenshot displays the result of running `Elk_readout` after successfully configuring the ELK instance.
 
  
-[Elk_readout](Pictures/Elk_readout.png)
+[Elk](Pictures/Elk.png)
 
 [Elk_readout](Pictures/Elk_readout.png)
 

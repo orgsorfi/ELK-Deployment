@@ -74,9 +74,10 @@ The following screenshot displays the result of running `Elk_readout` after succ
  
 [Elk_readout](Pictures/Elk_readout.png)
 
+[Elk_readout](Pictures/Elk_readout.png)
+
 This is and example of what the command line readout should look like when it has compleated properly without errors
 
-  - _/Pictures/Elk_readout.png_ -
   
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:

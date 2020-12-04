@@ -1,0 +1,40 @@
+﻿---
+- name: filebeat_setup
+  hosts: webservers
+  remote_user: adminR
+  become: true
+  tasks:
+
+   # download .deb
+   - name: download .deb file
+     command:
+       name: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.debhttps://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
+       state: present
+
+   # Install .deb
+   - name: Install .deb file
+     command:
+       name: dpkg -i filebeat-7.4.0-amd64.deb
+       state: present
+
+   # copy filebeat config file
+   - name: Copy filebeat config
+     copy:
+       src: /file/filebeat-config.yml
+       dest: /etc/filebeat/filebeat.yml
+     register: result
+   - debug:
+       var: result
+   
+   # Run Commands
+   - name: Run setup commands
+     command: filebeat modules enable system
+
+   # Run Cmmands
+   - name: Setup filebeat
+     command: filebeat setup
+   
+   # Run commands
+   - name: Start filebeat service
+     command: service filebeat start
+       

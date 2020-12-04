@@ -1,0 +1,35 @@
+---
+- name: DVWA Container setup
+  hosts: webservers
+  become: true
+  remote_user: adminR
+  tasks:
+
+   - name: Install docker.io
+     apt:
+       name: docker.io
+       state: present
+
+
+   - name: Install python3-pip
+     apt:
+       name: python3-pip
+       state: present
+
+   - name: Install docker
+     pip:
+       name: docker
+       state: present
+
+   - name: Download dvwa containter
+     docker_container:
+       name: dvwa
+       image: cyberxsecurity/dvwa
+       state: started
+       restart_policy: always
+       published_ports: 80:80
+
+   - name: Enable docker service
+     systemd:
+       name: docker
+       enabled: yes

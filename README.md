@@ -71,10 +71,12 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `Elk_readout` after successfully configuring the ELK instance.
 
-   - /Pictures/Elk_readout -
+ 
 [Elk_readout](Pictures/Elk_readout.png)
 
+this is and example of what the command line readout should look like when it has compleated properly without errors
 
+  - /Pictures/Elk_readout -
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - Web-1 @10.0.0.7 Web-2 @ 10.0.0.8 Web-3 @ 10.0.0.5

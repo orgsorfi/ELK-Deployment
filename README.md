@@ -69,10 +69,12 @@ The playbook implements the following tasks:
 - Copying the config file so that the port numbers are open to send the log data.
 - Setting up and running diffrent commands to congfigure and start the elk status.
 
-The following screenshot displays the result of running `Elk_stack_readout` after successfully configuring the ELK instance.
+The following screenshot displays the result of running `Elk_readout` after successfully configuring the ELK instance.
 
-   - /Pictures/Elk_stack_readout -
-[Elk_stack_readout](Pictures/Elk_stack_readout.png)
+   - /Pictures/Elk_readout -
+[Elk_readout](Pictures/Elk_readout.png)
+
+
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - Web-1 @10.0.0.7 Web-2 @ 10.0.0.8 Web-3 @ 10.0.0.5

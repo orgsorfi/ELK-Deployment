@@ -135,7 +135,9 @@ SSH into the control node and follow the steps below:
 - Copy the elk_stack.yml file copy to the /etc/ansible/roles file and update the remote_user: (with the correct name)
 - start your Jump box, then start and attach to the ansible continer.
 - In the ansible /etc/ansible/hosts file, add in the [ ELK ] section with the Internal IP address and ansible_python_interpreter=/usr/bin/python3 
-Example _[ELK]_
+
+Example: 
+_[ELK]_
 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 
 [Hosts](Pictures/host.PNG)

@@ -90,19 +90,31 @@ These Beats allow us to collect the following information from each machine:
 - They feed into kibana logs data consisting of: var/log files (filebeat) and system-level monitoring data (metricbeat). These are automated and push new data on a 10 sec interval.  
 
 - The following pictures are examples of the needed information to setup the .config files for each beat and the sections that need to be updated
-_ - this is for the setup of filebeat config file (output.elasticsearch) section 
+
+_ -This is for the setup of filebeat config file (output.elasticsearch) section 
+
 [Filebeat 1](Pictures/filebeat setup.kibina.2.PNG)
-_ - this is for the setup of filebeat config file (setup.kibana) section 
+
+_ - This is for the setup of filebeat config file (setup.kibana) section 
+
 [Filebeat 2](Pictures/fliebeat setup.kibina.PNG)
-_ -In kibana on the resourch page check for file input should look like this when all is done, and you test for data imputs
+
+_ - In kibana on the resourch page check for file input should look like this when all is done, and you test for data imputs
+
 [Filebeat 3](Pictures/verify filebeat data.PNG)
 
-_ - this is for the setup of metricbeat config file (output.elasticsearch) section 
+_ - This is for the setup of metricbeat config file (output.elasticsearch) section 
+
 [Metricbeat 1](Pictures/Metricbeat.setup.1.PNG)
-_ - this is for the setup of metricbeat config file (setup.kibana) setction 
+
+_ - This is for the setup of metricbeat config file (setup.kibana) setction 
+
 [Metricbeat 2](Pictures/Metricbeat.setup.2.PNG)
--In kibana on the resourch page check for file input should look like this when all is done, and you test for data inputs
+
+_ - In kibana on the resourch page check for file input should look like this when all is done, and you test for data inputs
+
 [Metricbeat 3](Pictures/docker metrics.PNG)
+
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 

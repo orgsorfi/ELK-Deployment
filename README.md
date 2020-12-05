@@ -28,9 +28,9 @@ Load balancing ensures that the application will be highly Accessible, in additi
 
 - The jump box is a secure computer that admins use to launch a new netork and servers. One of the major benifits of the jump box, is that it will alwase be running the latest software updates. They can be ristriced to only access at very specific loctations. They do not usaly have a GUI and should not be able to surf the web. they also let you connect and update mutlipul compuers at once.
 
-- Filebeat watches for changes in the log files on the VMs it looks for log files and then harvest the new data form it and passes it on to be proccesed_
+- Filebeat watches for changes in the log files on the VMs it looks for log files and then harvest the new data form it and passes it on to be proccesed.
 
-- Metricbeat records and harvests data by collecting mertic from the system suc as apache, HAProxy, MySQL and System and then passes it on to be proccessed_
+- Metricbeat records and harvests data by collecting mertic from the system suc as apache, HAProxy, MySQL and System and then passes it on to be proccessed.
 
 
 The configuration details of each machine may be found below.

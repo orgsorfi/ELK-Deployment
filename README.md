@@ -108,12 +108,12 @@ _ - In kibana on the resourch page check for file input should look like this wh
 - Pictures/filebeat.3.png
 _ - This is for the setup of metricbeat config file (output.elasticsearch) section 
 
-[Metricbeat](Pictures/metricbeat1.PNG)
+[Metricbeat](Pictures/metricbeat.1.png)
 - Pictures/metricbeat.1.png
 
 _ - This is for the setup of metricbeat config file (setup.kibana) setction 
 
-[Metricbeat](Pictures/metricbeat.2.PNG)
+[Metricbeat](Pictures/metricbeat.2.png)
 - Pictures/metricbeat.2.png
 _ - In kibana on the resourch page check for file input should look like this when all is done, and you test for data inputs
 

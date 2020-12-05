@@ -148,7 +148,7 @@ _[ELK]_
 - Now pull up a browser and navigate to the public IP address of the ELK VM at port 5601 with the /app/kibana line. It should look like this HTTP://(public IP):5601/app/kibana
 - Run the playbook, and navigate to public IP address of the VM at port :5601/app/kibana to check that the installation worked as expected.
 
-### Commands to use playbook
+### Commands to Use the Playbook
 These are the specific commands the user will need to run to download the playbook, update the files, etc.
 
 - To copy from a remote machine move all the files into a single folder and give it a name like /Yaml_scripts
@@ -161,10 +161,10 @@ These are the specific commands the user will need to run to download the playbo
 - I used this command to move all my scripts to the same folder in my ansible too clean them up
  cp *.yml Yaml_scripts/ 
 
-_ To copy to the container, you would use something like this -_
+- To copy to the container, you would use something like this -_
  scp /local/file/path adminR@example: /remote/path
  sudo docker cp /local/file/path "container number":/remote/path - 
- then you can attack to the container and run the script in the newly creat folder
+ then you can attack to the container and run the script in the newly created folder
 
 
 

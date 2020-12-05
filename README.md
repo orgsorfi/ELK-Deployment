@@ -93,31 +93,32 @@ These Beats allow us to collect the following information from each machine:
 
 _ -This is for the setup of filebeat config file (output.elasticsearch) section 
 
-[Filebeat](Pictures/filebeat setup.kibina.2.PNG)
-- Pictures/filebeat setup.kibina.2
+[Filebeat](Pictures/filebeat.1.PNG)
+- Pictures/filebeat.1.png
 
 _ - This is for the setup of filebeat config file (setup.kibana) section 
 
-[Filebeat](Pictures/filebeat setup.kibina.PNG)
--Pictures/filebeat setup.kibina
+[Filebeat](Pictures/filebeat.2.PNG)
+
+-Pictures/filebeat.2.png
 
 _ - In kibana on the resourch page check for file input should look like this when all is done, and you test for data imputs
 
-[Filebeat](Pictures/verify filebeat data.PNG)
-- Pictures/verify filebeat data
+[Filebeat](Pictures/filebeat.3.PNG)
+- Pictures/filebeat.3.png
 _ - This is for the setup of metricbeat config file (output.elasticsearch) section 
 
-[Metricbeat](Pictures/Metricbeat.setup.1.PNG)
-- Pictures/Metricbeat.setup.1
+[Metricbeat](Pictures/metricbeat1.PNG)
+- Pictures/Metricbeat.1.png
 
 _ - This is for the setup of metricbeat config file (setup.kibana) setction 
 
-[Metricbeat](Pictures/Metricbeat.setup.2.PNG)
-- Pictures/Metricbeat.setup.2
+[Metricbeat](Pictures/metricbeat.2.PNG)
+- Pictures/Metricbeat.2.png
 _ - In kibana on the resourch page check for file input should look like this when all is done, and you test for data inputs
 
-[Metricbeat](Pictures/docker metrics.PNG)
-- Pictures/docker metrics
+[Metricbeat](Pictures/metricbeat.3.PNG)
+- Pictures/metricbeat.3.png
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 

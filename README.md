@@ -137,7 +137,9 @@ SSH into the control node and follow the steps below:
 - In the ansible /etc/ansible/hosts file, add in the [ ELK ] section with the Internal IP address and ansible_python_interpreter=/usr/bin/python3 
 
 Example: 
+
 _[ELK]_
+
 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 
 [Hosts](Pictures/host.PNG)

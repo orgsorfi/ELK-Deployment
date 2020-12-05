@@ -89,7 +89,8 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - They feed into kibana logs data consisting of: var/log files (filebeat) and system-level monitoring data (metricbeat). These are automated and push new data on a 10 sec interval.  
 
-- The following pictures are examples of the needed information to setup the .config files for each beat and the sections that need to be updated
+
+The following pictures are examples of the needed information to setup the .config files for each beat and the sections that need to be updated
 
 _ -This is for the setup of filebeat config file (output.elasticsearch) section 
 
@@ -106,6 +107,7 @@ _ - In kibana on the resourch page check for file input should look like this wh
 
 [Filebeat](Pictures/filebeat.3.PNG)
 - Pictures/filebeat.3.png
+
 _ - This is for the setup of metricbeat config file (output.elasticsearch) section 
 
 [Metricbeat](Pictures/metricbeat.1.png)
@@ -115,6 +117,7 @@ _ - This is for the setup of metricbeat config file (setup.kibana) setction
 
 [Metricbeat](Pictures/metricbeat.2.png)
 - Pictures/metricbeat.2.png
+
 _ - In kibana on the resourch page check for file input should look like this when all is done, and you test for data inputs
 
 [Metricbeat](Pictures/metricbeat.3.PNG)

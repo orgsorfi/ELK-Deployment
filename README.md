@@ -24,13 +24,13 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly Accessible, in addition to restricting unwanted taffic to the network.
 
-- Load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It is also placed in an NSG (network security group) that were it looks for rules to apply when incoming traffic attempts conections to the IP load balancer there have also been other tools installed to help control conections like a health porbe
+- Load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It is also placed in an NSG (network security group) that were it looks for rules to apply when incoming traffic attempts conections to the IP load balancer there have also been other tools installed to help control conections like a health probe.
 
-- The jump box is a secure computer that admins use to launch a new netork and servers. One of the major benifits of the jump box, is that it will alwase be running the latest software updates. They can be ristriced to only access at very specific loctations. They do not usaly have a GUI and should not be able to surf the web. they also let you connect and update mutlipul compuers at once.
+- The jump box is a secure computer that admins use to launch a new network and servers. One of the major benifits of the jump box, is that it will always be running the latest software updates. They can be ristricted to only access at very specific locations. They do not usually have a GUI and should not be able to surf the web. They also let you connect and update multiple computers at once.
 
-- Filebeat watches for changes in the log files on the VMs it looks for log files and then harvest the new data form it and passes it on to be proccesed.
+- Filebeat watches for changes in the log files on the VMs. It looks for log files and then harvests the new data from it and passes it on to be proccesed.
 
-- Metricbeat records and harvests data by collecting mertic from the system suc as apache, HAProxy, MySQL and System and then passes it on to be proccessed.
+- Metricbeat records and harvests data by collecting metric from the system such as apache, HAProxy, MySQL and System and then passes it on to be proccessed.
 
 
 The configuration details of each machine may be found below.
@@ -52,7 +52,7 @@ Only the - ELK and Jump - machine can accept connections from the Internet. Acce
 - _67.169.250.57 _
 
 Machines within the network can only be accessed by Jump Box.
-- _Elk-Stack-VM can be accessed by the web machines and the ump box from internal network and by the newtwork admins office computer. Its IP address is 67.169.250.57
+- Elk-Stack-VM can be accessed by the web machines and the Jump box from internal network and by the network admins' office computer. It's IP address is 67.169.250.57
 
 A summary of the access policies in place can be found in the table below.
 
@@ -64,13 +64,13 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- Main advantage of automating configuration with Ansible is you can make changes to all containers at once with out haveing to move into each machine its like using group policies in a windows enviorment _
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because:
+- The main advantage of automating configuration with Ansible is you can make changes to all containers at once without having to move into each machine. It's like using group policies in a windows enviorment.
 
 The playbook implements the following tasks:
 - Downloading the ELK (sebp/elk:716) image to all machines using the curl command.
 - Package installatation with Dkpg.
-- Copying the config file so that the port numbers are open to send the log data.
+- Copying the -config file so that the port numbers are open to send the log data.
 - Setting up and running diffrent commands to congfigure and start the elk status.
 
 The following screenshot displays the result of running `Elk_readout` after successfully configuring the ELK instance.
@@ -94,35 +94,35 @@ These Beats allow us to collect the following information from each machine:
 - They feed into kibana logs data consisting of: var/log files (filebeat) and system-level monitoring data (metricbeat). These are automated and push new data on a 10 sec interval.  
 
 
-The following pictures are examples of the needed information to setup the .config files for each beat and the sections that need to be updated
+The following pictures are examples of the needed information to setup the -config files for each beat and the sections that need to be updated
 
-_ -This is for the setup of filebeat config file (output.elasticsearch) section 
+_ -This is for the setup of filebeat-config.yml file (output.elasticsearch) section 
 
 [Filebeat](Pictures/filebeat.1.PNG)
 - Pictures/filebeat.1.png
 
-_ - This is for the setup of filebeat config file (setup.kibana) section 
+_ - This is for the setup of filebeat-config.yml file (setup.kibana) section 
 
 [Filebeat](Pictures/filebeat.2.PNG)
 
 -Pictures/filebeat.2.png
 
-_ - In kibana on the resourch page check for file input should look like this when all is done, and you test for data imputs
+_ - In kibana on the resource page, check for file input. It should look like this when it is all done, Test for data imputs
 
 [Filebeat](Pictures/filebeat.3.PNG)
 - Pictures/filebeat.3.png
 
-_ - This is for the setup of metricbeat config file (output.elasticsearch) section 
+_ - This is for the setup of metricbeat-config.yml file (output.elasticsearch) section 
 
 [Metricbeat](Pictures/metricbeat.1.png)
 - Pictures/metricbeat.1.png
 
-_ - This is for the setup of metricbeat config file (setup.kibana) setction 
+_ - This is for the setup of metricbeat-config.yml file (setup.kibana) setction 
 
 [Metricbeat](Pictures/metricbeat.2.png)
 - Pictures/metricbeat.2.png
 
-_ - In kibana on the resourch page check for file input should look like this when all is done, and you test for data inputs
+_ - In kibana on the resource page, check for file input. It should look like this when it is all done. Test for data inputs
 
 [Metricbeat](Pictures/metricbeat.3.PNG)
 - Pictures/metricbeat.3.png
@@ -133,23 +133,25 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 
 - Copy the elk_stack.yml file copy to the /etc/ansible/roles file and update the remote_user: (with the correct name)
-- In the ansible /etc/ansible/hosts file add the host an ELK section with the Internal IP address and ansible_python_interpreter=/usr/bin/python3 
-- Now pull up a browser and navigate to the public IP address of the ELK VM at port 5601 with the /app/kibana line should look like this HTTP://publicip:5601/app/kibana
-- Run the playbook, and navigate to public ip address of the VM at port :5601/app/kibana to check that the installation worked as expected.
+- In the ansible /etc/ansible/hosts file, add in the hosts file an ELK section with the Internal IP address and ansible_python_interpreter=/usr/bin/python3 
+- Now pull up a browser and navigate to the public IP address of the ELK VM at port 5601 with the /app/kibana line. It should look like this HTTP://(public IP):5601/app/kibana
+- Run the playbook, and navigate to public IP address of the VM at port :5601/app/kibana to check that the installation worked as expected.
 
-_- The specific commands the user will need to run to download the playbook, update the files, etc._
+_ These are the specific commands the user will need to run to download the playbook, update the files, etc._
 
 - To copy from a remote machine move all the files into a single folder and give it a name like /Yaml_scripts
 - Then use the SCP protocol like this for the remote machine to your machine
  scp adminR@104.40.23.39:/home/adminR/Yaml_playbook_scripts/*.yml ./yaml_scripts 
-- Using this command to move them from the docker to the remote host machine
- sudo docker cp 862a4:/etc/ansible/Yaml_scripts ~/(filepath) 
-- I used this command to move all my scripts to the same folder in my ansible to clean them up
+- Use this command to move them from the docker to the remote host machine
+ sudo docker cp (docker container number):/etc/ansible/Yaml_scripts ~/(filepath) 
+ 
+ 
+- I used this command to move all my scripts to the same folder in my ansible too clean them up
  cp *.yml Yaml_scripts/ 
 
-_- To copy to the container you would use something like this -_
+_ To copy to the container, you would use something like this -_
  scp /local/file/path adminR@example: /remote/path
- sudo docker cp /local/file/path "container number":/remote/path
+ sudo docker cp /local/file/path "container number":/remote/path - 
  then you can attack to the container and run the script in the newly creat folder
 
 

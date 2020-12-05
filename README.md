@@ -24,9 +24,9 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly Accessible, in addition to restricting unwanted taffic to the network.
 
-- Load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It is also placed in an NSG (network security group) that were it looks for rules to apply when incoming traffic attempts conections to the IP load balancer there have also been other tools installed to help control conections like a health probe.
+- Load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It is also placed in an NSG (network security group), where it looks for rules to apply when incoming traffic attempts connections to the IP load balancer. There have also been other tools installed to help control connections like a health probe.
 
-- The jump box is a secure computer that admins use to launch a new network and servers. One of the major benifits of the jump box, is that it will always be running the latest software updates. They can be ristricted to only access at very specific locations. They do not usually have a GUI and should not be able to surf the web. They also let you connect and update multiple computers at once.
+- The jump box is a secure computer that admins use to launch a new network and servers. One of the major benifits of the jump box, is that it will always be running the latest software updates. They can be restricted to only be accessed at very specific locations. They do not usually have a GUI and should not be able to surf the web. They also let you connect and update multiple computers at once.
 
 - Filebeat watches for changes in the log files on the VMs. It looks for log files and then harvests the new data from it and passes it on to be proccesed.
 
@@ -65,7 +65,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because:
-- The main advantage of automating configuration with Ansible is you can make changes to all containers at once without having to move into each machine. It's like using group policies in a windows enviorment.
+- The main advantage of automating configuration with Ansible is you can make changes to all containers at once without having to move into each machine. It's like using group policies in a Windows enviorment.
 
 The playbook implements the following tasks:
 - Downloading the ELK (sebp/elk:716) image to all machines using the curl command.
@@ -79,7 +79,7 @@ The following screenshot displays the result of running `Elk_readout` after succ
 [Elk](Pictures/Elk.PNG)
 - _ Pictures/ELK.png_                                         
 
-This is and example of what the command line readout should look like when it has compleated properly without errors
+This is and example of what the command line readout should look like when it has completed properly without errors
 
   
 ### Target Machines & Beats
@@ -107,7 +107,7 @@ _ - This is for the setup of filebeat-config.yml file (setup.kibana) section
 
 -Pictures/filebeat.2.png
 
-_ - In kibana on the resource page, check for file input. It should look like this when it is all done, Test for data imputs
+_ - In kibana on the resource page, check for file input. It should look like this when it is all done. Test for data imputs
 
 [Filebeat](Pictures/filebeat.3.PNG)
 - Pictures/filebeat.3.png
@@ -133,7 +133,14 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 
 - Copy the elk_stack.yml file copy to the /etc/ansible/roles file and update the remote_user: (with the correct name)
-- In the ansible /etc/ansible/hosts file, add in the hosts file an ELK section with the Internal IP address and ansible_python_interpreter=/usr/bin/python3 
+- start your Jump box, then start and attach to the ansible continer.
+- In the ansible /etc/ansible/hosts file, add in the [ ELK ] section with the Internal IP address and ansible_python_interpreter=/usr/bin/python3 
+Example _[ELK]_
+10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+
+[Hosts](Pictures/host.PNG)
+
+- Once it is copied start and attach to the ansible container. Move into the directory were you copied the yaml script. Run ansilbe-playbook Elk_stack.yml 
 - Now pull up a browser and navigate to the public IP address of the ELK VM at port 5601 with the /app/kibana line. It should look like this HTTP://(public IP):5601/app/kibana
 - Run the playbook, and navigate to public IP address of the VM at port :5601/app/kibana to check that the installation worked as expected.
 

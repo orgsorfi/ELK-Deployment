@@ -148,7 +148,8 @@ _[ELK]_
 - Now pull up a browser and navigate to the public IP address of the ELK VM at port 5601 with the /app/kibana line. It should look like this HTTP://(public IP):5601/app/kibana
 - Run the playbook, and navigate to public IP address of the VM at port :5601/app/kibana to check that the installation worked as expected.
 
-_ These are the specific commands the user will need to run to download the playbook, update the files, etc._
+### Commands to use playbook
+These are the specific commands the user will need to run to download the playbook, update the files, etc.
 
 - To copy from a remote machine move all the files into a single folder and give it a name like /Yaml_scripts
 - Then use the SCP protocol like this for the remote machine to your machine

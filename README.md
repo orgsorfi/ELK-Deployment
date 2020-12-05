@@ -140,7 +140,7 @@ Example _[ELK]_
 
 [Hosts](Pictures/host.PNG)
 
-- Once it is copied start and attach to the ansible container. Move into the directory were you copied the yaml script. Run ansilbe-playbook Elk_stack.yml 
+- Move into the directory were you copied the yaml script. Run ansilbe-playbook Elk_stack.yml 
 - Now pull up a browser and navigate to the public IP address of the ELK VM at port 5601 with the /app/kibana line. It should look like this HTTP://(public IP):5601/app/kibana
 - Run the playbook, and navigate to public IP address of the VM at port :5601/app/kibana to check that the installation worked as expected.
 

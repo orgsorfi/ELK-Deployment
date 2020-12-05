@@ -72,8 +72,8 @@ The playbook implements the following tasks:
 The following screenshot displays the result of running `Elk_readout` after successfully configuring the ELK instance.
 
  
-[Elk](Pictures/ELK.png)
-- _ Pictures/ELK.png_
+[Elk](Pictures/ELK)
+- _ Pictures/ELK.png_                                         
 
 This is and example of what the command line readout should look like when it has compleated properly without errors
 

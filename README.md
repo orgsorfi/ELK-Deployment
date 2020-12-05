@@ -24,10 +24,14 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly Accessible, in addition to restricting unwanted taffic to the network.
 
-- _ Load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It is also placed in an NSG (network security group) that were it looks for rules to apply when incoming traffic attempts conections to the IP load balancer there have also been other tools installed to help control conections like a health porbe
-- _ The jump box is a secure computer that admins use to launch a new netork and servers. One of the major benifits of the jump box, is that it will alwase be running the latest software updates. They can be ristriced to only access at very specific loctations. They do not usaly have a GUI and should not be able to surf the web. they also let you connect and update mutlipul compuers at once.
-- _ Filebeat watches for changes in the log files on the VMs it looks for log files and then harvest the new data form it and passes it on to be proccesed_
-- _ Metricbeat records and harvests data by collecting mertic from the system suc as apache, HAProxy, MySQL and System and then passes it on to be proccessed_
+- Load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It is also placed in an NSG (network security group) that were it looks for rules to apply when incoming traffic attempts conections to the IP load balancer there have also been other tools installed to help control conections like a health porbe
+
+- The jump box is a secure computer that admins use to launch a new netork and servers. One of the major benifits of the jump box, is that it will alwase be running the latest software updates. They can be ristriced to only access at very specific loctations. They do not usaly have a GUI and should not be able to surf the web. they also let you connect and update mutlipul compuers at once.
+
+- Filebeat watches for changes in the log files on the VMs it looks for log files and then harvest the new data form it and passes it on to be proccesed_
+
+- Metricbeat records and harvests data by collecting mertic from the system suc as apache, HAProxy, MySQL and System and then passes it on to be proccessed_
+
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.

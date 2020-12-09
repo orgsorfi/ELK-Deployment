@@ -49,7 +49,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the - ELK and Jump - machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _67.169.250.57 _
+- _67.***.***.57 _
 
 Machines within the network can only be accessed by Jump Box.
 - Elk-Stack-VM can be accessed by the web machines and the Jump box from internal network and by the network admins' office computer. It's IP address is 67.169.250.57
@@ -58,8 +58,8 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 67.169.250.57        |
-| Elk VM   | Yes                 | 67.169.250.57        |
+| Jump Box | Yes                 | 67.***.***.57     |
+| Elk VM   | Yes                 | 67.***.***.57        |
 |          |                     |                      |
 
 ### Elk Configuration

@@ -116,9 +116,10 @@ _[ELK]_
 
 The following pictures are examples of the needed information to setup the -config files for each beat and the sections that need to be updated
 
-_ -This is for the setup of filebeat-config.yml file (output.elasticsearch) section. After downloading the need basic configuration file. update it with the following information form this section.  This file will be used to direct the outputs of the beat. Pointing them at the Kibana and Logstash VM for proccessing (keep in mind that the config file will be copied to the machine you wish to monitor).
+### Filebeat
 
-### Filebeat 
+_ -This is for the setup of filebeat-config.yml file (output.elasticsearch) section. After downloading the need basic configuration file. update it with the following information form this section.  This file will be used to direct the outputs of the beat. Pointing them at the Kibana and Logstash VM for proccessing (keep in mind that the config file will be copied to the machine you wish to monitor).
+ 
 [Filebeat](Pictures/filebeat.1.PNG)
 - Pictures/filebeat.1.png
 

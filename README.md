@@ -93,40 +93,6 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - They feed into kibana logs data consisting of: var/log files (filebeat) and system-level monitoring data (metricbeat). These are automated and push new data on a 10 sec interval.  
 
-
-The following pictures are examples of the needed information to setup the -config files for each beat and the sections that need to be updated
-
-_ -This is for the setup of filebeat-config.yml file (output.elasticsearch) section 
-
-[Filebeat](Pictures/filebeat.1.PNG)
-- Pictures/filebeat.1.png
-
-_ - This is for the setup of filebeat-config.yml file (setup.kibana) section 
-
-[Filebeat](Pictures/filebeat.2.PNG)
-
--Pictures/filebeat.2.png
-
-_ - In kibana on the resource page, check for file input. It should look like this when it is all done. Test for data imputs
-
-[Filebeat](Pictures/filebeat.3.PNG)
-- Pictures/filebeat.3.png
-
-_ - This is for the setup of metricbeat-config.yml file (output.elasticsearch) section 
-
-[Metricbeat](Pictures/metricbeat.1.png)
-- Pictures/metricbeat.1.png
-
-_ - This is for the setup of metricbeat-config.yml file (setup.kibana) setction 
-
-[Metricbeat](Pictures/metricbeat.2.png)
-- Pictures/metricbeat.2.png
-
-_ - In kibana on the resource page, check for file input. It should look like this when it is all done. Test for data inputs
-
-[Metricbeat](Pictures/metricbeat.3.PNG)
-- Pictures/metricbeat.3.png
-
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
@@ -145,8 +111,44 @@ _[ELK]_
 [Hosts](Pictures/host.PNG)
 
 - Move into the directory were you copied the yaml script. Run ansilbe-playbook Elk_stack.yml 
-- Now pull up a browser and navigate to the public IP address of the ELK VM at port 5601 with the /app/kibana line. It should look like this HTTP://(public IP):5601/app/kibana
-- Run the playbook, and navigate to public IP address of the VM at port :5601/app/kibana to check that the installation worked as expected.
+- After running the playbook, pull up a browser and navigate to the public IP address of the ELK VM at port 5601 with the /app/kibana line. It should look like this HTTP://(public IP):5601/app/kibana
+- If you get a Kibana page it was successfully created the next steps would be to use the playbooks for setting up the beats
+
+The following pictures are examples of the needed information to setup the -config files for each beat and the sections that need to be updated
+
+_ -This is for the setup of filebeat-config.yml file (output.elasticsearch) section. After downloading the need basic configuration file. update it with the following information form this section.  This file will be used to direct the outputs of the beat. Pointing them at the Kibana and Logstash VM for proccessing (keep in mind that the config file will be copied to the machine you wish to monitor).
+
+### Filebeat 
+[Filebeat](Pictures/filebeat.1.PNG)
+- Pictures/filebeat.1.png
+
+_ - This is for the setup of filebeat-config.yml file (setup.kibana) section you will need the playbook for setup. It is the filebeat_setup.yml
+
+[Filebeat](Pictures/filebeat.2.PNG)
+
+-Pictures/filebeat.2.png
+
+_ - In kibana on the resource page, check for file input. It should look like this when it is all done. Test for data imputs
+
+[Filebeat](Pictures/filebeat.3.PNG)
+- Pictures/filebeat.3.png
+
+### Metricbeat
+_ - This is for the setup of metricbeat-config.yml file (output.elasticsearch) section. After downloading the need basic configuration file. update it with the following information form this section. This will work just like the Filebeat update the needed sections and run the playbook  
+
+[Metricbeat](Pictures/metricbeat.1.png)
+- Pictures/metricbeat.1.png
+
+_ - This is for the setup of metricbeat-config.yml file (setup.kibana) setction  you will need the playbook for setup. It is the metricbeat_setup.yml
+
+[Metricbeat](Pictures/metricbeat.2.png)
+- Pictures/metricbeat.2.png
+
+_ - In kibana on the resource page, check for file input. It should look like this when it is all done. Test for data inputs
+
+[Metricbeat](Pictures/metricbeat.3.PNG)
+- Pictures/metricbeat.3.png
+
 
 ### Commands to Use the Playbook
 These are the specific commands the user will need to run to download the playbook, update the files, etc.

@@ -118,12 +118,12 @@ The following pictures are examples of the needed information to setup the -conf
 
 ### Filebeat
 
-_ -This is for the setup of filebeat-config.yml file (output.elasticsearch) section. After downloading the need basic configuration file. update it with the following information form this section.  This file will be used to direct the outputs of the beat. Pointing them at the Kibana and Logstash VM for proccessing (keep in mind that the config file will be copied to the machine you wish to monitor).
+_ -This is for the setup of filebeat-config.yml file (output.elasticsearch) section. After downloading the need basic configuration file. update it with the following information form this section.  This file will be used to direct the outputs of the beat. Pointing them at the Kibana and Logstash VM for proccessing (keep in mind that the config file will be copied to the machine you wish to monitor). The needed Yaml playbook script is the filebeat_setup.yml.
  
 [Filebeat](Pictures/filebeat.1.PNG)
 - Pictures/filebeat.1.png
 
-_ - This is for the setup of filebeat-config.yml file (setup.kibana) section you will need the playbook for setup. It is the filebeat_setup.yml
+_ - This is for the setup of filebeat-config.yml file (setup.kibana) section you will need the playbook for setup. 
 
 [Filebeat](Pictures/filebeat.2.PNG)
 
@@ -135,12 +135,12 @@ _ - In kibana on the resource page, check for file input. It should look like th
 - Pictures/filebeat.3.png
 
 ### Metricbeat
-_ - This is for the setup of metricbeat-config.yml file (output.elasticsearch) section. After downloading the need basic configuration file. update it with the following information form this section. This will work just like the Filebeat update the needed sections and run the playbook  
+_ - This is for the setup of metricbeat-config.yml file (output.elasticsearch) section. After downloading the need basic configuration file. update it with the following information form this section. This will work just like the Filebeat update the needed sections and run the playbook. The needed Yaml playbook script is the metricbeat_setup.yml.
 
 [Metricbeat](Pictures/metricbeat.1.png)
 - Pictures/metricbeat.1.png
 
-_ - This is for the setup of metricbeat-config.yml file (setup.kibana) setction  you will need the playbook for setup. It is the metricbeat_setup.yml
+_ - This is for the setup of metricbeat-config.yml file (setup.kibana) setction  you will need the playbook for setup.
 
 [Metricbeat](Pictures/metricbeat.2.png)
 - Pictures/metricbeat.2.png
